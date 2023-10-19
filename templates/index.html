@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+</head>
+<body>
+    <h1>Customer Churn Prediction</h1>
+    <form method="POST" action="/predict">
+        <label for="Age">Age:</label>
+        <input type="text" name="Age" id="Age" required><br><br>
+
+        <label for="Subscription_Length_Months">Subscription Length (in Months):</label>
+        <input type="text" name="Subscription_Length_Months" id="Subscription_Length_Months" required><br><br>
+
+        <label for="Monthly_Bill">Monthly Bill:</label>
+        <input type="text" name="Monthly_Bill" id="Monthly_Bill" required><br><br>
+
+        <label for="Total_Usage_GB">Total Usage (in GB):</label>
+        <input type="text" name="Total_Usage_GB" id="Total_Usage_GB" required><br><br>
+
+        <label for="log_Subscription_Length_Months">Log Subscription Length (in Months):</label>
+        <input type="text" name="log_Subscription_Length_Months" id="log_Subscription_Length_Months" required><br><br>
+
+        <label for="log_Monthly_Bill">Log Monthly Bill:</label>
+        <input type="text" name="log_Monthly_Bill" id="log_Monthly_Bill" required><br><br>
+
+        <label for="log_Total_Usage_GB">Log Total Usage (in GB):</label>
+        <input type="text" name="log_Total_Usage_GB" id="log_Total_Usage_GB" required><br><br>
+
+        <label for="interaction_feature">Interaction Feature:</label>
+        <input type="text" name="interaction_feature" id="interaction_feature" required><br><br>
+
+        <label for="Location">Location:</label>
+        <select name="Location" required>
+            <option value="Chicago">Chicago</option>
+            <option value="Houston">Houston</option>
+            <option value="LosAngeles">Los Angeles</option>
+            <option value="Miami">Miami</option>
+            <option value="NewYork">New York</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="Gender">Gender:</label>
+        <select name="Gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict Customer Churn">
+    </form>
+    <p>{{ prediction_text }}</p>
+</body>
+</html>
