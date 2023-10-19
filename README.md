@@ -37,7 +37,7 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/yourusername/your-repo.git
+git clone(https://github.com/Ayan022000/Customer_churn_prediction.git)
 Install the required dependencies using pip:
 
 bash
